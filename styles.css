@@ -1,0 +1,459 @@
+/*---------------------------------------------------MAIN---------------------------------------------------*/
+:root {
+    --main-text-font: Arial, Helvetica, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+.space-between {
+    justify-content: space-between;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.top {
+    padding: 12px 0;
+    align-items: center;
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+/*---------------------------------------------------HEADER---------------------------------------------------*/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 50px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    position: fixed;
+    background: rgba(118, 111, 111, 0.1)
+
+}
+header.sticky{
+    background:  rgba(255, 255, 255, 1);
+}
+header:hover {
+    background:  rgba(255, 255, 255, 1);
+}
+/*------------------------------LOGO------------------------------*/
+.logo{
+    flex: 0.5;
+    max-height: 60px;
+}
+.logo> a img{
+    max-height: 66px;
+}
+
+.menu{
+    flex: 3;
+    display: flex;
+    
+}
+.menu > li{
+    padding: 20px;
+    position: relative;
+}
+/*------------------------------IPHONE MENU------------------------------*/
+.iphone-sub-menu{
+    position: absolute;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 80px;
+    transition: 0.3s;
+    background-color: aqua;
+}
+.menu > li:hover .iphone-sub-menu{
+    visibility: visible;
+    top: 60px;
+}
+
+.iphone-sub-menu> li ul a{
+    font-weight: lighter;
+    padding-left: 10px;
+}
+/*------------------------------IPAD MENU------------------------------*/
+.ipad-sub-menu{
+    position: absolute;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top:80px;
+    transition: 0.3s;
+    background-color: aqua;
+}
+.menu > li:hover .ipad-sub-menu{
+    visibility: visible;
+    top: 60px;
+}
+
+.ipad-sub-menu> li ul a{
+    font-weight: lighter;
+    padding-left: 10px;
+}
+/*------------------------------MACBOOK MENU------------------------------*/
+.macbook-sub-menu{
+    position: absolute;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top:80px;
+    transition: 0.3s;
+    background-color: aqua;
+}
+.menu > li:hover .macbook-sub-menu{
+    visibility: visible;
+    top: 60px;
+}
+.macbook-sub-menu> li ul a{
+    font-weight: lighter;
+    padding-left: 10px;
+}
+/*------------------------------PC MENU------------------------------*/
+.pc-sub-menu{
+    position: absolute;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top:80px;
+    transition: 0.3s;
+    background-color: aqua;
+}
+.menu > li:hover .pc-sub-menu{
+    visibility: visible;
+    top: 60px;
+}
+.pc-sub-menu> li ul a{
+    font-weight: lighter;
+    padding-left: 10px;
+}
+/*------------------------------WATCH MENU------------------------------*/
+.watch-sub-menu{
+    position: absolute;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top:80px;
+    transition: 0.3s;
+    background-color: aqua;
+}
+.menu > li:hover .watch-sub-menu{
+    visibility: visible;
+    top: 60px;
+}
+.watch-sub-menu> li ul a{
+    font-weight: lighter;
+    padding-left: 10px;
+}
+/*------------------------------ANDROID MENU------------------------------*/
+.android-sub-menu{
+    position: absolute;
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top:80px;
+    transition: 0.3s;
+    background-color: aqua;
+}
+.menu > li:hover .android-sub-menu{
+    visibility: visible;
+    top: 60px;
+}
+.android-sub-menu> li ul a{
+    font-weight: lighter;
+    padding-left: 10px;
+}
+/*------------------------------OTHERS MENU------------------------------*/
+.others{
+    flex: 1;
+    display: flex;
+}
+.others li {
+    padding: 0 15px;
+    position: relative;
+}
+.others li::after {
+    content:"";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: brown;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.others li:last-child::after {
+    display: none;
+}
+.others > li:first-child {
+    position: relative;
+}
+.others > li:first-child input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid brown;
+    background: transparent;
+    outline: none;
+}
+.others > li:first-child i {
+    position: absolute;
+    right: 15px;
+    bottom: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    opacity: 0.6;
+    
+}
+/*---------------------------------------------------SLIDER---------------------------------------------------*/
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition: 0.3s;
+  }
+#slider{
+    overflow: hidden;
+    padding-bottom: 30px;
+    border-bottom: 3px solid blueviolet;
+  }
+  .aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .dot-container{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .dot{
+    height: 15px;
+    width: 15px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .dot.active{
+    background-color: gray;
+    transition: 0.3s;
+  }
+  /*---------------------------------------------------APP---------------------------------------------------*/
+  .app-container {
+    text-align: center;
+    align-items: center;
+    padding: 60px 0 30px 0;
+    
+  }
+  .app-download {
+    margin: 50px;
+  }
+  .app-download img {
+    height: 70px;
+  }
+  .app-container p {
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+.app-container input {
+    margin-top: 40px;
+    border: none;
+    border-bottom: 1px solid brown ;
+    padding-bottom: 10px;
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+}
+.mail-sending {
+    position: relative;
+    width: 400px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+.mail-sending i {
+    position: absolute;
+    top: 65px;
+    right: 0;
+
+}
+ /*---------------------------------------------------FOOTER---------------------------------------------------*/
+ footer {
+    text-align: center;
+    margin: 50px 0 50px;
+ }
+ .footer-top {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+    height: 70px;
+ }
+ .footer-top li {
+    padding: 0 10px;
+    position: relative;
+ }
+ .footer-top li a{
+    padding: 0 10px;
+ }
+.footer-top li::after {
+    content:"";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #ccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-top li:last-child::after {
+    display: none;
+}
+ /*---------------------------------------------------CATEGORY---------------------------------------------------*/
+.category {
+    padding: 100px 0 0;
+}
+.category-top {
+    margin-bottom: 50px;
+}
+.category-top p {
+    font-family: var(--main-text-font);
+    margin: 0 12px;
+    font-size: 12px;
+    
+}
+/*------------------------------LEFT------------------------------*/
+.category-left {
+    width: 20%;
+    font-family: var(--main-text-font);
+    font-size: 18px;
+}
+.category-left-li ul li a {
+    font-weight: lighter;
+    font-size: 16px;
+    
+}
+.category-left ul li {
+    padding: 12px 0;
+    
+}
+.category-left ul li ul li {
+    padding-left: 15px;
+}
+.category-left ul li ul {
+    display: none;
+}
+.category-left-li.block ul {
+    display: block;
+}
+/*------------------------------RIGHT------------------------------*/
+.category-right {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.category-right-top-item:first-child {
+    flex: 2;
+    font-size: 20px;
+    font-family: var(--main-text-font);
+    font-weight: bold;
+}
+.category-right-top-item {
+    flex: 1;
+    padding: 0 12px;
+    
+}
+.category-right-top-item button {
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.category-right-top-item select {
+    background-color: white;
+    border: 1px solid #ddd;
+    appearance: none;
+    padding: 11px 15px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.category-right-top-item > .fa:last-child {
+    position: absolute;
+    right: 28px;
+    top: 10px;
+}
+.category-right-content {
+    margin-top: 20px;
+    justify-content: space-between;
+}
+.category-right-content-item {
+    width: calc(33.33% - 12px);
+    text-align: center;
+    padding: 12px 0; 
+}
+.category-right-content-item h1 {
+    font-size: 11px;
+    font-family: var(--main-text-font);
+    margin-top: 6px;
+    color: #333;
+}
+.category-right-content-item img {
+    width: 100%;
+}
+/*------------------------------RIGHT BOTTOM------------------------------*/
+.category-right-bottom {
+    justify-content: space-between;
+    margin: 30px 0 20px;
+    width: 100%;
+}
+.category-right-bottom p {
+    font-family: var(--main-text-font);
+    font-size: 12px;
+}
